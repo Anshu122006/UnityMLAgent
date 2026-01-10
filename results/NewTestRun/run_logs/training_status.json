@@ -1,0 +1,35 @@
+{
+    "mass": {
+        "lesson_num": 0
+    },
+    "scale": {
+        "lesson_num": 0
+    },
+    "AvoidFire": {
+        "checkpoints": [
+            {
+                "steps": 237161,
+                "file_path": "results\\NewTestRun\\AvoidFire\\AvoidFire-237161.onnx",
+                "reward": null,
+                "creation_time": 1768045532.078283,
+                "auxillary_file_paths": [
+                    "results\\NewTestRun\\AvoidFire\\AvoidFire-237161.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 237161,
+            "file_path": "results\\NewTestRun\\AvoidFire.onnx",
+            "reward": null,
+            "creation_time": 1768045532.078283,
+            "auxillary_file_paths": [
+                "results\\NewTestRun\\AvoidFire\\AvoidFire-237161.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cu121"
+    }
+}

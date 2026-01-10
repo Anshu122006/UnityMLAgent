@@ -1,0 +1,66 @@
+# ======================
+# Unity generated folders
+# ======================
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+venv/
+
+# ======================
+# OS / Editor files
+# ======================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ======================
+# Visual Studio / Rider
+# ======================
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# ======================
+# Unity meta cache
+# ======================
+*.pidb.meta
+*.pdb.meta
+
+# ======================
+# Build artifacts
+# ======================
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.exe
+*.x86
+*.x86_64
+*.zip
+
+# ======================
+# Crash & profiler data
+# ======================
+sysinfo.txt
+*.stacktrace
+*.log
+
+# ======================
+# Addressables / Asset Bundles
+# ======================
+/Assets/AddressableAssetsData/*/*.bin*
+/Assets/AddressableAssetsData/*/*.json*
