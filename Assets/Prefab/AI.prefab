@@ -201,15 +201,17 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  startPos: {fileID: 0}
-  exit: {fileID: 0}
-  rb: {fileID: 1926126921618849930}
+  stateManager: {fileID: 0}
+  moveManager: {fileID: 0}
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
+  fireLayer:
+    serializedVersion: 2
+    m_Bits: 0
   rewardLayer:
     serializedVersion: 2
     m_Bits: 1024
