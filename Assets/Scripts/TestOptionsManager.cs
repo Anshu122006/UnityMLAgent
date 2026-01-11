@@ -19,14 +19,15 @@ public class TestOptionsManager : MonoBehaviour {
     [SerializeField] private GameObject perspective;
     [SerializeField] private GameObject fix;
 
-    [Header("Other buttons")]
+    [Header("Components")]
     [SerializeField] private Button addFire;
     [SerializeField] private Button removeFire;
     [SerializeField] private Button addAgent;
+    [SerializeField] private AgentListManager listManager;
 
     [Header("Prefabs")]
-    [SerializeField] private Transform firePref;
-    [SerializeField] private Transform agentPref;
+    [SerializeField] private GameObject firePref;
+    [SerializeField] private GameObject agentPref;
 
     [Header("Cursor Icons")]
     [SerializeField] Texture2D fireIcon;
@@ -54,7 +55,8 @@ public class TestOptionsManager : MonoBehaviour {
                     Instantiate(firePref, hit.point, Quaternion.identity);
                 }
                 else if ((floorLayer & surface) != 0 & addAgentEnabled) {
-                    Instantiate(agentPref, hit.point, quaternion.identity);
+                    GameObject agent = Instantiate(agentPref, hit.point, quaternion.identity);
+                    listManager.AddItem(agent);
                 }
                 else if ((fireLayer & surface) != 0) {
                     Destroy(hit.collider.gameObject);
@@ -110,8 +112,14 @@ public class TestOptionsManager : MonoBehaviour {
             orthographic.SetActive(false);
             perspective.SetActive(false);
             fix.SetActive(false);
-            if (wasOrthographic) orthographic.SetActive(true);
-            else perspective.SetActive(true);
+            if (wasOrthographic) {
+                orthographic.SetActive(true);
+                GlobalObjects.Instance.mainCamera.orthographic = true;
+            }
+            else {
+                perspective.SetActive(true);
+                GlobalObjects.Instance.mainCamera.orthographic = false;
+            }
 
             addFire.interactable = true;
             removeFire.interactable = true;

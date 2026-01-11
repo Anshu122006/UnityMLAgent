@@ -20,31 +20,16 @@ public class GlobalCameraManager : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape) && !inMainPos) {
-            Camera mainCamera = GlobalObjects.Instance.mainCamera;
-            mainCamera.transform.parent = mainPos;
-            mainCamera.transform.localPosition = Vector3.zero;
-            mainCamera.transform.localRotation = Quaternion.identity;
-            inMainPos = true;
+            SetMainCameraPos();
         }
+    }
 
-        // if (Input.GetMouseButtonDown(0)) {
-        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //     RaycastHit hit;
-
-        //     if (Physics.Raycast(ray, out hit)) {
-        //         GameObject clickedObject = hit.collider.gameObject;
-        //         if (clickedObject == lastClickedObject &&
-        //         Time.time - lastClickTime <= doubleClickTime) {
-        //             Debug.Log(clickedObject);
-        //             if (clickedObject.TryGetComponent<AgentInteractionManager>(out AgentInteractionManager agent)
-        //                     && inMainPos) {
-        //                 agent.SetCameraPos();
-        //                 inMainPos = false;
-        //             }
-        //         }
-        //         lastClickTime = Time.time;
-        //         lastClickedObject = clickedObject;
-        //     }
-        // }
+    public void SetMainCameraPos() {
+        if (InMainPos) return;
+        Camera mainCamera = GlobalObjects.Instance.mainCamera;
+        mainCamera.transform.parent = mainPos;
+        mainCamera.transform.localPosition = Vector3.zero;
+        mainCamera.transform.localRotation = Quaternion.identity;
+        InMainPos = true;
     }
 }

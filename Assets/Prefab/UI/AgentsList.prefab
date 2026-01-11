@@ -33,7 +33,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.001021171}
+  m_AnchoredPosition: {x: 0, y: 0.0010492615}
   m_SizeDelta: {x: 0, y: 473}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1846791096614727080
@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 4517807441322789078}
   - component: {fileID: 8978110365993040713}
   - component: {fileID: 7103309413733502266}
+  - component: {fileID: 6093281419973099718}
   m_Layer: 5
   m_Name: AgentsList
   m_TagString: Untagged
@@ -333,6 +334,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6093281419973099718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557262587839526026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd17024f3fdce740b6ef483ad0c656c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 2495133693790128308}
+  listItemPref: {fileID: 6943517697706646252, guid: 828225c96aaa0a147a4907aca5995836, type: 3}
 --- !u!1 &4770109816465079670
 GameObject:
   m_ObjectHideFlags: 0

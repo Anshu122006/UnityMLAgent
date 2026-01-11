@@ -1,16 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class AgentListManager : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+public class AgentListManager : MonoBehaviour {
+    [SerializeField] private Transform content;
+    [SerializeField] private GameObject listItemPref;
+    private Dictionary<string, AgentListItem> itemsDict = new();
+    public void AddItem(GameObject agent) {
+        AgentListItem listItem = Instantiate(listItemPref, content).GetComponent<AgentListItem>();
+        string id = listItem.Initialize(agent, this);
+        itemsDict[id] = listItem;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void removeItem(string id) {
+        itemsDict.Remove(id);
     }
 }
